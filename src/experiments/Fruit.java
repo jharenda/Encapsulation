@@ -18,22 +18,29 @@ public class Fruit {
     private String color; 
     private String price;
     
-    private boolean inStock;
-    private boolean isOrdered;
-    private double weight; 
+    private boolean inStock = true;
+    private boolean isOrdered = false;
+   
     private int quantity; 
     
+
     // this is the main public method I am using to manage my fruit. Not happy about the method name, need to work on that. 
     // Maybe it's difficult to name because my example is slightly convuluted. 
-    public void manageFruit(String name, String color, String price){
+    public void manageFruit(String name, String color, String price, int quantity){
         setName(name);  
         setColor(color); 
         setPrice(price); 
+        setQuantity(quantity); 
        
     }
+    
 // public incase we want to get it? Mulling over this
     public String getName() {
         return name;
+    }
+    public void stock() {
+        if (quantity > 10)
+        System.out.println("Stocked " + quantity + " " + name + "s");
     }
 //want to control access- only want to set the name from the manager
     private void setName(String name) {
@@ -64,7 +71,7 @@ public class Fruit {
         this.inStock = inStock;
     }
 
-    public boolean isIsOrdered() {
+    public boolean isOrdered() {
         return isOrdered;
     }
 
@@ -72,13 +79,6 @@ public class Fruit {
         this.isOrdered = isOrdered;
     }
 
-    public double getWeight() {
-        return weight;
-    }
-
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
 
     public int getQuantity() {
         return quantity;

@@ -19,16 +19,20 @@ public class Startup {
             may need to create a new class that talks to Employee. This does
             not have to be a GUI class.
         */
-        Employee employee = new Employee();
-        employee.firstName = "Peter";
-        employee.lastName = "Piper";
-        employee.ssn = "333-1234";
-        
-        employee.meetDepartmentStaff();
-        employee.meetWithHrForBenefitAndSalryInfo();
-        employee.reviewDeptPolicies();
+        //Employee employee = new Employee();
+    // Only need to access the HRMananger ( HR manager is like the car, employee is like the engine4
+    // I don't need to have any interaction with the employee, it can stay hidden
+        HRManager m = new HRManager();
+        m.trainEmployee("Jennifer", "Harenda", "123");
+//        employee.firstName = "Peter";
+//        employee.lastName = "Piper";
+//        employee.ssn = "333-1234";
+//        
+//        employee.meetDepartmentStaff();
+//        employee.meetWithHrForBenefitAndSalryInfo();
+//        employee.reviewDeptPolicies();
 
-        System.out.println("The employee's status is: " + employee.getStatus());
+//        System.out.println("The employee's status is: " + employee.getStatus());
     }
     
     

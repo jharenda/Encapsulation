@@ -6,8 +6,8 @@ package experiments;
  */
 public class ProduceManager {
 
-    private Fruit fruit;
-
+    private Fruit fruit = new Fruit();
+//Fruit fruit = new Fruit();
     public ProduceManager(String idNumber) {
         if (idNumber.equals("123")) {
             newFruit();
@@ -16,16 +16,14 @@ public class ProduceManager {
 
     // calls Fruit Constructor, automatically calls the private manage fruit method which sets the parameters 
     public void  newFruit() {
-        Fruit fruit = new Fruit();
+        
         fruit.manageFruit("apple", "red", "$1.22", 4);
 //        fruitList[1].manageFruit("kiwi", "green", "$2.62", 7);
 //        fruitList[2].manageFruit("banana", "yellow", ".22", 11);
-        System.out.println( fruit.getName() + fruit.getColor() + fruit.getPrice() + fruit.getQuantity());
+        
     }
      public String getInfo(){
-         return fruit.getName() + fruit.getColor() + fruit.getPrice() + fruit.getQuantity();
-         
-        
+         return ( fruit.getName() + " " +  fruit.getColor() + " "  + fruit.getPrice() + " " +  fruit.getQuantity());
     }
 
     // put stock and order here because I shouldn't need to interact with the fruit to stock/order.

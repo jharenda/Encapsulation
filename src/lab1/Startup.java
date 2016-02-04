@@ -24,15 +24,7 @@ public class Startup {
     // I don't need to have any interaction with the employee, it can stay hidden
         HRManager m = new HRManager();
         m.trainEmployee("Jennifer", "Harenda", "123");
-//        employee.firstName = "Peter";
-//        employee.lastName = "Piper";
-//        employee.ssn = "333-1234";
-//        
-//        employee.meetDepartmentStaff();
-//        employee.meetWithHrForBenefitAndSalryInfo();
-//        employee.reviewDeptPolicies();
-
-//        System.out.println("The employee's status is: " + employee.getStatus());
+        System.out.println( m.getEmployeeStatus());
     }
     
     

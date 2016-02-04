@@ -25,6 +25,7 @@ public class HRManager {
         newEmployee.setSsn(ssn);
         // requires cubeId number
         newEmployee.hireEmployee("108");
+        employee = newEmployee; 
        
     }
     

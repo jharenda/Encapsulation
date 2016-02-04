@@ -8,8 +8,9 @@ public class Startup {
 
     public static void main(String[] args) {
         ProduceManager pm = new ProduceManager("123");
+        System.out.println(pm.getInfo());
         System.out.println( pm.order());
-       // System.out.println( pm.stock());
+        System.out.println( pm.stock());
         
 
     }
